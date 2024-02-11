@@ -1,0 +1,82 @@
+getgenv().Settings = {
+    ["Host"] = "your_host_user", --// Your host name here
+    ["key"] = "your_key_here", --// Your personal key
+    ["Commands"] = {
+        ["GetTarget"] = ":l",  --// Prefix and the target name after to get a target
+        ["LoopKill"] = "!l", -- // same as GetTarget but will still kill the target after it stomps
+        ["Restock"] = ":restock", --// Restocks ammo until it reaches MaxAmmo
+        ["Rejoin"] = "!rejoin", --// Will rejoin the server
+        ["Reset"] = "!reset", -- // will reset your alt
+        ["Bring"] = ":b", --// Prefix and the target name after to bring a target
+        ["AA"] = "!h", -- // will enable a velocity spoofer (good against shitsploit like celex)
+        ["Say"] = "!m" -- // that prefix followed by the message you wanna say from the bot(don't be dumb)
+    },
+    ["Orbit"] = {
+        ["Speed"] = 0.1, --// Speed of orbit (lower is faster)
+        ["Radius"] = 10, --// Radius of orbit
+        ["Yoffset"] = 5, --// Height at which the bot spins
+        ["Safety"] = 10, --// Bot retreats if health is lower than this
+    },
+    ["AA"] = {
+        ["X"] = 200, -- // velocity on vector3 X
+        ["Y"] = 200, -- // velocity on vector3 Z
+        ["Z"] = 200  -- // velocity on vector3 Y
+    },
+    ["CPU"] = {
+        ["3DRendering"] = true, --// Enable/disable 3D rendering (false disables 3D rendering but script still works)
+        ["Low GFX"] = true, --// Turns all parts' material into smooth plastic(will increase the loading time)
+    },
+    ["Gun"] = {
+        ["HitSoundFx"] = true, --// Enable custom hit sound on hit
+        ["ID"] = 661479685, --// Custom hit sound asset id
+        ["PlaybackSpeed"] = 1, --// Adjust playback speed (0.5 = 2x slower, 3 = 3x faster, 1 is default speed)
+        ["Weapon"] = '[LMG]', --// Specify the gun to use
+        ["MaxAmmo"] = 6000, --// Amount of ammo the bot will buy
+    },
+    ["Checks"] = {
+        ["Friend"] = false, --// Check if target is a friend with the host
+        ["Crew"] = false, --// Check if target is in the host's crew
+    },
+    ["Admin"] = {
+        ["Detection"] = true, -- // will check for players that have higher rank than the one set
+        ["Rank"] = 2 -- // for detection
+    },
+    ["Resolver"] = {
+        ["AlwayOn"] = false, --// Resolver will always be on (useful if you have high fps on the killbot)
+        ["OnDetection"] = true, --// Detects if velocity is higher than the Detection value
+        ["Detection"] = 80, --// Detection value
+    },
+    ["Predictions"] = {
+        ["AntiGroundShotValue"] = 0.5, --// how much it will substract from Y target velocity(do not change unless necessary)
+        ["GroundShotDetection"] = -20,
+        --// Prediction values for various ping ranges
+        ["270_280"] = 0.2152,
+        ["260_270"] = 0.195566,
+        ["250_260"] = 0.175566,
+        ["240_250"] = 0.1651,
+        ["230_240"] = 0.1678,
+        ["220_230"] = 0.15692,
+        ["210_220"] = 0.165566,
+        ["200_210"] = 0.1678,
+        ["190_200"] = 0.166547,
+        ["180_190"] = 0.19284,
+        ["170_180"] = 0.1923111,
+        ["160_170"] = 0.16,
+        ["150_160"] = 0.15,
+        ["140_150"] = 0.1223333,
+        ["130_140"] = 0.156692,
+        ["120_130"] = 0.143765,
+        ["110_120"] = 0.1455,
+        ["100_110"] = 0.13034,
+        ["90_100"] = 0.136,
+        ["80_90"] = 0.1347,
+        ["70_80"] = 0.119,
+        ["60_70"] = 0.12731,
+        ["50_60"] = 0.127668,
+        ["40_50"] = 0.125,
+        ["30_40"] = 0.11,
+        ["20_30"] = 0.1,
+        ["10_20"] = 0.05
+    }
+}
+loadstring(game:HttpGet('https://raw.githubusercontent.com/alttobypassstuff/AETHERIUM/main/Source'))()
