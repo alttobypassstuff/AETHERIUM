@@ -12,6 +12,6 @@ Auto safety
 Custom sound fx
 
 Mod Detection
-tutorial on how to use
+
 # AETHERIUM GUI : 
 still in development(will only release when web executor release)
