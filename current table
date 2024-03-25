@@ -1,6 +1,6 @@
 getgenv().Settings = {
     ["Host"] = "your_host_user", --// Your host name here
-    ["key"] = "your_key_here", --// Your personal key
+    ["Key"] = "Your_Key_Here", --// Your personal key
     ["Commands"] = {
         ["GetTarget"] = ":l",  --// Prefix and the target name after to get a target
         ["LoopKill"] = "!l", -- // same as GetTarget but will still kill the target after it stomps
@@ -8,26 +8,28 @@ getgenv().Settings = {
         ["Rejoin"] = "!rejoin", --// Will rejoin the server
         ["Reset"] = "!reset", -- // will reset your alt
         ["Bring"] = ":b", --// Prefix and the target name after to bring a target
-        ["AA"] = "!h", -- // will enable a velocity spoofer (good against shitsploit like celex)
+        ["AA"] = "!h", -- // will enable antiaim
         ["Say"] = "!m" -- // that prefix followed by the message you wanna say from the bot(don't be dumb)
     },
     ["Orbit"] = {
-        ["Speed"] = 0.1, --// Speed of orbit (lower is faster)
+        ["Speed"] = 70, --// Speed of orbit 
         ["Radius"] = 10, --// Radius of orbit
         ["Yoffset"] = 5, --// Height at which the bot spins
         ["Safety"] = 10, --// Bot retreats if health is lower than this
     },
     ["AA"] = {
-        ["X"] = 200, -- // velocity on vector3 X
-        ["Y"] = 200, -- // velocity on vector3 Z
-        ["Z"] = 200  -- // velocity on vector3 Y
+        ["Method"] = "Custom_Vel", -- // (Custom_Vel, Velocity_Desync, fake_lag)
+        ["X"] = 200, -- // velocity on vector3.X
+        ["Y"] = 200, -- // velocity on vector3.Z
+        ["Z"] = 200  -- // velocity on vector3.Y
     },
     ["CPU"] = {
+        ["Fps Cap"] = 45,
         ["3DRendering"] = true, --// Enable/disable 3D rendering (false disables 3D rendering but script still works)
         ["Low GFX"] = true, --// Turns all parts' material into smooth plastic(will increase the loading time)
     },
     ["Gun"] = {
-        ["HitSoundFx"] = true, --// Enable custom hit sound on hit
+        ["HitSoundFx"] = false, --// Enable custom hit sound on hit
         ["ID"] = 661479685, --// Custom hit sound asset id
         ["PlaybackSpeed"] = 1, --// Adjust playback speed (0.5 = 2x slower, 3 = 3x faster, 1 is default speed)
         ["Weapon"] = '[LMG]', --// Specify the gun to use
@@ -42,14 +44,17 @@ getgenv().Settings = {
         ["Rank"] = 2 -- // for detection
     },
     ["Resolver"] = {
-        ["AlwayOn"] = false, --// Resolver will always be on (useful if you have high fps on the killbot)
+        ["AlwayOn"] = true, --// Resolver will always be on (only use it if your fps are over 30 constantly)
         ["OnDetection"] = true, --// Detects if velocity is higher than the Detection value
         ["Detection"] = 80, --// Detection value
     },
     ["Predictions"] = {
-        ["AntiGroundShotValue"] = 0.5, --// how much it will substract from Y target velocity(do not change unless necessary)
-        ["GroundShotDetection"] = -20,
+        ["AntiGroundShotValue"] = 0.3, --// how much it will substract from Y target velocity(do not change unless necessary)
+        ["GroundShotDetection"] = -20, -- // detection to subsctact velocity
         --// Prediction values for various ping ranges
+        ["default"] = 0.119,-- // this will be used if autoprediction or AutomaticPreds isn't on 
+        ["autoprediction"] = true, --// will use the value that you put
+        ["AutomaticPreds"] = false, -- // will generate prediction automatically(you have to turn off autoprediction)
         ["270_280"] = 0.2152,
         ["260_270"] = 0.195566,
         ["250_260"] = 0.175566,
