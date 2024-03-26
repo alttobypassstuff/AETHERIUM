@@ -1,0 +1,6 @@
+if not getgenv().puefpbphzbgzeg then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/alttobypassstuff/AETHERIUM/main/Source"))()
+else
+    print"already executed"
+end
+getgenv().puefpbphzbgzeg = true
