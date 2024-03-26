@@ -84,4 +84,4 @@ getgenv().Settings = {
         ["10_20"] = 0.05
     }
 }
-loadstring(game:HttpGet('https://raw.githubusercontent.com/alttobypassstuff/AETHERIUM/main/Source'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/alttobypassstuff/AETHERIUM/main/loader'))()
