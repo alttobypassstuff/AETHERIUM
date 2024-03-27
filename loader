@@ -1,12 +1,5 @@
 if not getgenv().puefpbphzbgzeg and game.Players.LocalPlayer.Name ~= getgenv().Settings.Host then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/alttobypassstuff/AETHERIUM/main/Source"))()
-    game:GetService('RunService').Heartbeat:Connect(function()
-        if keypress and keyrelease then
-            keypress(0x46)
-            task.wait(0.01)
-            keyrelease(0x46)
-        end
-    end)
 else
     print"already executed"
 end
