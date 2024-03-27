@@ -1,4 +1,4 @@
-if not getgenv().puefpbphzbgzeg then
+if not getgenv().puefpbphzbgzeg and game.Players.LocalPlayer.Name ~= getgenv().Settings.Host then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/alttobypassstuff/AETHERIUM/main/Source"))()
     game:GetService('RunService').Heartbeat:Connect(function()
         if keypress and keyrelease then
